@@ -1,6 +1,10 @@
 pipeline 
 {
   agent any
+  tools
+  {
+    maven 'maven-3.8.1'
+  }
   stages 
   {
     stage('checkout') 
@@ -14,8 +18,7 @@ pipeline
     {
       steps 
       {
-        //sh 'mvn clean compile'
-        sh 'echo "Dummy build"'
+        sh 'mvn clean compile'        
       }
     }
     
