@@ -1,8 +1,5 @@
 pipeline {
   agent { label 'linux' }
-  tools {
-    maven
-  }
   stages {
     stage('checkout') {
       steps {
