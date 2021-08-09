@@ -33,7 +33,7 @@ pipeline
     {
       steps 
       {
-        sh 'mvn packahge'        
+        sh 'mvn package'        
       }
     }
     
