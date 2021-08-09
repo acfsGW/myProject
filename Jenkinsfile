@@ -1,26 +1,23 @@
-pipeline {
+pipeline 
+{
   agent any
-  stages {
-    stage('checkout') {
-      steps {
+  stages 
+  {
+    stage('checkout') 
+    {
+      steps 
+      {
         git 'https://github.com/effectivejenkins/myProject.git'
       }
     }
-    stage('Build') {
-      steps {
-        sh 'mvn clean compile'
+    stage('Build') 
+    {
+      steps 
+      {
+        //sh 'mvn clean compile'
+        sh 'echo "Dummy build"'
       }
     }
-    //stage('Test') {
-    //  steps {
-    //    sh 'mvn test'
-    //    junit '**/target/surefire-reports/TEST-*.xml'
-    //  }
-    //}
-    stage('Package') {
-      steps {
-        sh 'mvn package'
-      }
-    }
+    
   }
 }
